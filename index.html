@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css Files/all.min.css" />
+    <link rel="stylesheet" href="css Files/normalize.css" />
+    <link rel="stylesheet" href="css Files/main.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>Crud</h2>
+        <p>Product Manegment system</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="Title" id="title" />
+        <div class="price">
+          <input type="number" placeholder="Price" id="price" />
+          <input type="number" placeholder="Taxes" id="taxes" />
+          <input type="number" placeholder="Ads" id="ads" />
+          <input type="number" placeholder="Discount" id="discount" />
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="Count" id="count" />
+        <input type="text" placeholder="Category" id="category" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="Outputs">
+        <div class="searchBlock">
+          <input
+            type="text"
+            onkeyup="searchData(this.value)"
+            placeholder="Search"
+            id="search"
+          />
+          <div class="btnSearch">
+            <button id="searchTitle" onclick="getSearchMode(this.id)">
+              Search By Title
+            </button>
+            <button id="searchCategory" onclick="getSearchMode(this.id)">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <div class="responsive-table">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="JS Files/main.js"></script>
+  </body>
+</html>

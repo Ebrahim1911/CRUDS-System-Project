@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #005792;
+  --mainColorTwo: #fff;
+}
+body {
+  background-color: #222;
+  font-family: system-ui;
+}
+html {
+  scroll-behavior: smooth;
+}
+.crud {
+  width: 80%;
+  margin: auto;
+}
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.head h2 {
+  color: var(--mainColor);
+}
+.head p {
+  color: var(--mainColorTwo);
+  font-weight: bold;
+}
+.price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #111;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+  color: var(--mainColorTwo);
+  transition: 0.3s;
+}
+input::placeholder {
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 12px;
+}
+input:focus::placeholder:not(#search) {
+  color: transparent;
+}
+input:focus {
+  background-color: #000;
+  transform: scale(1.1);
+}
+#total {
+  background-color: #a00d02;
+  color: var(--mainColorTwo);
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+}
+#total::before {
+  content: "Total:";
+}
+button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--mainColor);
+  color: var(--mainColorTwo);
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+button:hover {
+  background-color: hsl(204, 96%, 22%);
+  letter-spacing: 1px;
+}
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+.btnSearch button {
+  width: 45%;
+}
+.responsive-table {
+  overflow-x: auto;
+}
+table {
+  color: var(--mainColor);
+  min-width: 1000px;
+  text-align: center;
+  margin: 10px 0;
+}
+th,
+td {
+  padding: 5px;
+}
